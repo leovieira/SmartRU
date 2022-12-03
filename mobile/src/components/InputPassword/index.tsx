@@ -5,7 +5,6 @@ import Icon from '@expo/vector-icons/FontAwesome5';
 import { InputText, InputTextProps } from '../InputText';
 
 import { styles } from './styles';
-
 import { THEME } from '../../theme';
 
 export interface InputPasswordProps extends InputTextProps {}

@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
     backgroundColor: THEME.COLORS.GRAY,
   },
   btnDisabled: {
-    backgroundColor: THEME.COLORS.LIGHT_GRAY,
+    opacity: 0.8,
   },
   txtBtn: {
     textAlign: 'center',

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, Image, TouchableOpacity, FlatList } from 'react-native';
+import { Text, View, Image, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import Icon from '@expo/vector-icons/FontAwesome5';
@@ -7,21 +7,13 @@ import axios from 'axios';
 import { API_URL } from '@env';
 
 import { HomeParams } from '../../@types/navigation';
-import BottomDrawer, { DrawerState } from '../../components/BottomDrawer';
+import { UserData } from '../../@types/api';
+import { Heading } from '../../components/Heading';
 import { Button } from '../../components/Button';
+import BottomDrawer, { DrawerState } from '../../components/BottomDrawer';
 
 import { styles } from './styles';
 import { THEME } from '../../theme';
-
-interface UserData {
-  id: number;
-  name: string;
-  email: string;
-  registry: string;
-  username: string;
-  profile: string;
-  tickets: number;
-}
 
 export function Home() {
   const route = useRoute();
@@ -31,7 +23,7 @@ export function Home() {
 
   useEffect(() => {
     axios
-      .get(`${API_URL}/user/${userId}`)
+      .get(`${API_URL}/users/${userId}`)
       .then((response) => {
         setUserData(response.data);
       })
@@ -64,7 +56,7 @@ export function Home() {
 
   function handleRefreshTickets() {
     axios
-      .get(`${API_URL}/user/${userId}/tickets`)
+      .get(`${API_URL}/users/${userId}/tickets`)
       .then((response) => {
         setUserData(
           (prev) => ({ ...prev, tickets: response.data.tickets } as UserData)
@@ -79,7 +71,11 @@ export function Home() {
   const navigation = useNavigation();
 
   function handleGoToBuyTickets() {
-    navigation.navigate('buyTickets', { userId });
+    navigation.navigate('buyTickets', {
+      userId,
+      userEmail: userData?.email,
+      userMercadopagoId: userData?.mercadopagoId,
+    });
   }
 
   return (
@@ -102,15 +98,13 @@ export function Home() {
           </TouchableOpacity>
         </View>
 
-        <View style={styles.hello}>
-          <Image
-            source={{ uri: API_URL + userData?.profile }}
-            style={styles.helloImg}
+        <View style={styles.helloContainer}>
+          <Image source={{ uri: userData?.profile }} style={styles.helloImg} />
+          <Heading
+            title={`${greeting},`}
+            subtitle={`${userData?.firstName} ${userData?.lastName}`}
+            style={styles.helloHeading}
           />
-          <View style={styles.helloHeader}>
-            <Text style={styles.helloTitle}>{greeting},</Text>
-            <Text style={styles.helloSubtitle}>{userData?.name}</Text>
-          </View>
         </View>
 
         <View style={styles.ticketsContainer}>

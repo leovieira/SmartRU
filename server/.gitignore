@@ -1,6 +1,6 @@
 node_modules/
 src/database/*
 !src/database/.gitkeep
-src/public/images/*
-!src/public/images/profile-default.jpg
+src/public/uploads/*
+!src/public/uploads/profile.jpg
 .env

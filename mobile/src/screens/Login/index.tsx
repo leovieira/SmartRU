@@ -43,7 +43,7 @@ export function Login() {
     }
 
     axios
-      .post(`${API_URL}/auth`, {
+      .post(`${API_URL}/auth/login`, {
         username,
         password,
       })

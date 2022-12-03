@@ -1,7 +1,6 @@
 import { TextInput, TextInputProps } from 'react-native';
 
 import { styles } from './styles';
-
 import { THEME } from '../../theme';
 
 export interface InputTextProps extends TextInputProps {}

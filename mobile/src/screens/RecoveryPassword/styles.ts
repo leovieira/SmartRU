@@ -14,17 +14,8 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
   },
-  title: {
+  heading: {
     marginTop: 20,
-    fontSize: THEME.FONT_SIZE.LG,
-    fontFamily: THEME.FONT_FAMILY.BOLD,
-    color: THEME.COLORS.BLUE,
-  },
-  subtitle: {
-    marginTop: 5,
-    fontSize: THEME.FONT_SIZE.MD,
-    fontFamily: THEME.FONT_FAMILY.REGULAR,
-    color: THEME.COLORS.BLUE,
   },
   inputEmail: {
     marginTop: 50,

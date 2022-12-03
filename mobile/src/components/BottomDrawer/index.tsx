@@ -7,9 +7,9 @@ import {
   PanResponderGestureState,
   View,
 } from 'react-native';
-import { THEME } from '../../theme';
 
 import { styles } from './styles';
+import { THEME } from '../../theme';
 
 const { height } = Dimensions.get('window');
 export enum DrawerState {

@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
   },
-  hello: {
+  helloContainer: {
     width: '100%',
     marginTop: 30,
     flexDirection: 'row',
@@ -26,24 +26,13 @@ export const styles = StyleSheet.create({
     height: 72,
     borderRadius: 36,
   },
-  helloHeader: {
+  helloHeading: {
     marginLeft: 20,
-  },
-  helloTitle: {
-    fontSize: THEME.FONT_SIZE.LG,
-    fontFamily: THEME.FONT_FAMILY.BOLD,
-    color: THEME.COLORS.BLUE,
-  },
-  helloSubtitle: {
-    marginTop: 5,
-    fontSize: THEME.FONT_SIZE.MD,
-    fontFamily: THEME.FONT_FAMILY.REGULAR,
-    color: THEME.COLORS.BLUE,
   },
   ticketsContainer: {
     width: '100%',
     marginTop: 50,
-    borderRadius: 6,
+    borderRadius: 10,
     borderWidth: 1,
     borderColor: THEME.COLORS.LIGHT_GRAY,
     backgroundColor: THEME.COLORS.PURE_WHITE,

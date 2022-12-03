@@ -9,6 +9,8 @@ export const THEME = {
     LIGHT_BLUE: '#0c326f',
     BLUE: '#071d41',
     RED: '#db2a2a',
+    YELLOW: '#e0d52f',
+    OVERLAY: 'rgba(0,0,0,0.6)',
   },
 
   FONT_FAMILY: {

@@ -14,17 +14,8 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
   },
-  title: {
+  heading: {
     marginTop: 20,
-    fontSize: THEME.FONT_SIZE.LG,
-    fontFamily: THEME.FONT_FAMILY.BOLD,
-    color: THEME.COLORS.BLUE,
-  },
-  subtitle: {
-    marginTop: 5,
-    fontSize: THEME.FONT_SIZE.MD,
-    fontFamily: THEME.FONT_FAMILY.REGULAR,
-    color: THEME.COLORS.BLUE,
   },
   ticketsContainer: {
     width: '100%',
@@ -58,6 +49,49 @@ export const styles = StyleSheet.create({
     fontSize: THEME.FONT_SIZE.SM,
     fontFamily: THEME.FONT_FAMILY.REGULAR,
     color: THEME.COLORS.GREEN,
+  },
+  detailsContainer: {
+    width: '100%',
+    marginTop: 20,
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: THEME.COLORS.LIGHT_GRAY,
+    backgroundColor: THEME.COLORS.PURE_WHITE,
+    paddingVertical: 10,
+    paddingHorizontal: 15,
+  },
+  detailsItem: {
+    marginVertical: 5,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-end',
+  },
+  detailsTitle: {
+    fontSize: THEME.FONT_SIZE.MD,
+    fontFamily: THEME.FONT_FAMILY.REGULAR,
+    color: THEME.COLORS.GRAY,
+  },
+  detailsData: {
+    fontSize: THEME.FONT_SIZE.MD,
+    fontFamily: THEME.FONT_FAMILY.MEDIUM,
+    color: THEME.COLORS.GRAY,
+  },
+  divider: {
+    marginVertical: 20,
+    width: '100%',
+    height: 1,
+    borderRadius: 1,
+    backgroundColor: THEME.COLORS.LIGHT_GRAY,
+  },
+  detailsTotalTitle: {
+    fontSize: THEME.FONT_SIZE.MD,
+    fontFamily: THEME.FONT_FAMILY.MEDIUM,
+    color: THEME.COLORS.GRAY,
+  },
+  detailsTotalData: {
+    fontSize: THEME.FONT_SIZE.LG,
+    fontFamily: THEME.FONT_FAMILY.BOLD,
+    color: THEME.COLORS.BLUE,
   },
   btnBuyTickets: {
     marginTop: 20,

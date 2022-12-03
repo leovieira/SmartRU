@@ -4,11 +4,11 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import Icon from '@expo/vector-icons/FontAwesome5';
 
+import { Heading } from '../../components/Heading';
 import { InputText } from '../../components/InputText';
 import { Button } from '../../components/Button';
 
 import { styles } from './styles';
-
 import { THEME } from '../../theme';
 
 export function RecoveryPassword() {
@@ -38,8 +38,11 @@ export function RecoveryPassword() {
         </TouchableOpacity>
       </View>
 
-      <Text style={styles.title}>Recuperar senha</Text>
-      <Text style={styles.subtitle}>Informe seu email de cadastrado</Text>
+      <Heading
+        title="Recuperar senha"
+        subtitle="Informe seu email de cadastrado"
+        style={styles.heading}
+      />
 
       <InputText placeholder="E-mail" style={styles.inputEmail} />
       <Button text="ENVIAR CÓDIGO DE RECUPERAÇÃO" style={styles.btnRecovery} />

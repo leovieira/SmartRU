@@ -4,6 +4,8 @@ export interface HomeParams {
 
 export interface BuyTicketsParams {
   userId: number;
+  userEmail: string | undefined;
+  userMercadopagoId: string | null | undefined;
 }
 
 declare global {
